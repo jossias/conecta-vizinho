@@ -2,6 +2,7 @@ import { useState } from "react";
 import Hero from "@/components/Hero";
 import SearchBar from "@/components/SearchBar";
 import EmpreendedorCard from "@/components/EmpreendedorCard";
+import Footer from "@/components/Footer";
 import { empreendedoresData } from "@/data/empreendedores";
 
 const Index = () => {
@@ -49,6 +50,8 @@ const Index = () => {
           )}
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };

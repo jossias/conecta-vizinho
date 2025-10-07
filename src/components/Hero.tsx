@@ -18,12 +18,10 @@ const Hero = () => {
       
       <div className="container relative z-10 px-4 py-20 mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-          Conectando Empreendedores
-          <br />
-          <span className="text-accent">ao Sucesso</span>
+          ConectaMoz
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Descubra pequenos negócios incríveis na sua região e apoie empreendedores locais
+          Conectando pequenos empreendedores com clientes em todo Moçambique
         </p>
         <Button 
           size="lg" 
