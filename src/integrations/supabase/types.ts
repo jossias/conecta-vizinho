@@ -14,7 +14,98 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      avaliacoes: {
+        Row: {
+          classificacao: number
+          comentario: string | null
+          created_at: string
+          empreendedor_id: string
+          id: string
+          usuario_id: string
+        }
+        Insert: {
+          classificacao: number
+          comentario?: string | null
+          created_at?: string
+          empreendedor_id: string
+          id?: string
+          usuario_id: string
+        }
+        Update: {
+          classificacao?: number
+          comentario?: string | null
+          created_at?: string
+          empreendedor_id?: string
+          id?: string
+          usuario_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "avaliacoes_empreendedor_id_fkey"
+            columns: ["empreendedor_id"]
+            isOneToOne: false
+            referencedRelation: "empreendedores"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      empreendedores: {
+        Row: {
+          created_at: string
+          descricao: string
+          foto: string
+          id: string
+          localizacao: string
+          negocio: string
+          nome: string
+          telefone: string
+        }
+        Insert: {
+          created_at?: string
+          descricao: string
+          foto: string
+          id?: string
+          localizacao: string
+          negocio: string
+          nome: string
+          telefone: string
+        }
+        Update: {
+          created_at?: string
+          descricao?: string
+          foto?: string
+          id?: string
+          localizacao?: string
+          negocio?: string
+          nome?: string
+          telefone?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          nome: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id: string
+          nome: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          nome?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
